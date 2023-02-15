@@ -30,14 +30,19 @@ function Home() {
             </div>
           </div>
           <div className="ContainerSobreMim">
-            <h2>Sobre mim</h2>
-            <p>
-              Desenvolvedor Front-end formado no curso full stack da gama Academy, com especialização em front-end. Trabalhos como freelancer desde dezembro de 2022 e com isso tive experiência de pegar projetos do zero e projetos já startados. 
-            </p>
-            <div className='ContainerContatos'>
-              <a href=""><AiFillLinkedin />Linkedin</a>
-              <a href=""><IoLogoWhatsapp /> WhatsApp</a>
-              <a href=""><AiOutlineGithub />GitHub</a>
+            <div className='ContainerImgBanner'>
+              <h1>Comits caindo</h1>
+            </div>
+            <div className='ContainerInfo'>
+              <h2>Sobre mim</h2>
+              <p>
+                Desenvolvedor Front-end formado no curso full stack da gama Academy, com especialização em front-end. Trabalhos como freelancer desde dezembro de 2022 e com isso tive experiência de pegar projetos do zero e projetos já startados. 
+              </p>
+              <div className='ContainerContatos'>
+                <a href=""><AiFillLinkedin />Linkedin</a>
+                <a href=""><IoLogoWhatsapp /> WhatsApp</a>
+                <a href=""><AiOutlineGithub />GitHub</a>
+              </div>
             </div>
           </div>
         </Section1>

@@ -7,6 +7,7 @@ export const Header = styled.header`
     align-items: center;
     justify-content: center;
     background: #0000cc;
+    background-image: linear-gradient(to left, #0000cc, #2926E5);
 
     nav ul {
         display: flex;
@@ -48,10 +49,11 @@ export const Header = styled.header`
 `;
 
 export const Section1 = styled.section`
-    height: 80vh;
+    height: 90vh;
     width: 100vw;
     display: flex;
     align-items: center;
+    background-image: linear-gradient(to left bottom, #0000cc, #1a17d9, #2926e5, #3533f2, #4040ff);
 
     .ContainerApresentacao {
         width: 50%;
@@ -59,13 +61,14 @@ export const Section1 = styled.section`
         flex-direction: column;
         align-items: center;
         text-align: start;
+        margin-bottom: 10%;
 
         .ContainerTitulos {
             margin-bottom: 30px;
 
             h3 {
                 font-size: 1.5rem;
-                color: #0000cc;
+                color: #fff;
             }
 
             h1 {
@@ -76,7 +79,7 @@ export const Section1 = styled.section`
                 font-size: 2rem;
 
                 span {
-                    color: #0000cc;
+                    color: #fff;
                 }
             }
         }
@@ -90,8 +93,8 @@ export const Section1 = styled.section`
             font-weight: 700;
             font-size: 1rem;
             cursor: pointer;
-            border: 1px solid #0000cc;
             transition: all 0.5s;
+            border: none;
 
             :nth-child(1) {
                 background-color: #0000cc;
@@ -99,18 +102,25 @@ export const Section1 = styled.section`
 
                 :hover {
                     background: none;
-                    color: #0000cc;
+                    color: #000;
+                    font-size: 1.1rem;
                     transform: scale(1.1);
+                    border: 1.5px solid #000;
                 }
             }
 
             :nth-child(2) {
                 background: none;
+                border: 1.5px solid #fff;
+                color: #fff;
 
                 :hover {
                     background: #0000cc;
-                    color: #fff;
+                    color: #000;
                     transform: scale(1.1);
+                    border: none;
+                    font-size: 1.1rem;
+                    font-weight: 600;
                 }
             }
         }
@@ -119,14 +129,35 @@ export const Section1 = styled.section`
 
     .ContainerSobreMim {
         width: 50%;
+        height: 90vh;
+        padding-top: 10vh;
         display: flex;
         flex-direction: column;
         align-items: center;
+        position: relative;
+
+        .ContainerImgBanner h1 {
+            width: 200px;
+            margin-bottom: 50px;
+            position: absolute;
+            top: 30%;
+            left: 25%;
+        }
+
+        .ContainerInfo {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            top: 60%;
+            left: -20%;
 
         h2 {
             font-size: 2rem;
             text-align: center;
             margin-bottom: 20px;
+            color: #fff;
         }
 
         p {
@@ -134,6 +165,7 @@ export const Section1 = styled.section`
             margin-bottom: 25px;
             font-size: 1.1rem;
             text-align: justify;
+            color: #fff;
         }
 
         .ContainerContatos {
@@ -142,19 +174,19 @@ export const Section1 = styled.section`
         a {
             font-size: 1.2rem;
             margin: 0 10px;
-            color: #000;
+            color: #fff;
             display: flex;
             align-items: center;
             transition: all .5s ;
 
 
             :hover {
-                border-bottom: 1px solid #000;
+                border-bottom: 1px solid #fff;
                 font-size: 1.3rem;
                 font-weight: 600;
                 margin: 0 15px;
             }
-        }
+        }}
     }
     }
 `;
