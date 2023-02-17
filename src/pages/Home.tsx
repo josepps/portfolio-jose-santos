@@ -1,6 +1,8 @@
 import { IoLogoWhatsapp } from 'react-icons/io';
-import { AiFillLinkedin, AiOutlineGithub } from 'react-icons/ai';
-import { Header, Section1 } from "./Home.style"
+import { AiFillLinkedin, AiOutlineGithub,AiFillHtml5 } from 'react-icons/ai';
+
+import { Header, Section1, Section2 } from "./Home.style"
+import Habilidades from '../Components/Habilidades';
 
 function Home() {
 
@@ -31,7 +33,7 @@ function Home() {
           </div>
           <div className="ContainerSobreMim">
             <div className='ContainerImgBanner'>
-              <h1>Comits caindo</h1>
+              <h1>animação, aqui em cima indo para baixo do title, ou visse versa</h1>
             </div>
             <div className='ContainerInfo'>
               <h2>Sobre mim</h2>
@@ -46,6 +48,12 @@ function Home() {
             </div>
           </div>
         </Section1>
+        <Section2>
+          <h2>Habilidades</h2>
+          <div className='ContainerHabilidades'>
+            <Habilidades icone={<AiFillHtml5 />} titulo="HTML5"/>
+          </div>
+        </Section2>
       </main>
     </>
   )

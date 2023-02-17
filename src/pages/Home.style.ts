@@ -190,3 +190,25 @@ export const Section1 = styled.section`
     }
     }
 `;
+
+export const Section2 = styled.section`
+    width: 100vw;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h2 {
+        margin: 2% 0;
+        font-size: 2.5rem;
+        font-weight: 900;
+    }
+
+    .ContainerHabilidades {
+        width: 80%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
+`;
