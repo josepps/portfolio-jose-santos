@@ -36,22 +36,7 @@ export const Section1 = styled.section`
                 font-size: 1rem;
                 position: relative;
 
-                &:before {
-                    content: "";
-                    position: absolute;
-                    width: 100%;
-                    height: 2px;
-                    bottom: -5px;
-                    left: 0;
-                    background: #038C73;
-                    visibility: visible;   
-                }
-
-                :hover:before {
-                    background: red;
-                }
-
-                /* :before{
+                &:before{
                 content: "";
                 position: absolute;
                 width: 100%;
@@ -64,18 +49,18 @@ export const Section1 = styled.section`
                 transform: scaleX(0);
                 -webkit-transition: all 0.3s ease-in-out 0s;
                 transition: all 0.3s ease-in-out 0s;
-                } */
+                }
 
-                /* :hover {
+                &:hover {
                 color: #36BFB1;
                 font-size: 1.1rem;
                 
-                :before {
+                &:before {
                 visibility: visible;
                 -webkit-transform: scaleX(1);
                 transform: scaleX(1);
                 }
-                } */
+                }
                 }
 
             }
@@ -147,7 +132,7 @@ export const Section1 = styled.section`
                 overflow: hidden;
                 transition: all .7s ease;
 
-                :before {
+                &:before {
                     content: "";
                     position: absolute;
                     top: 50%;
@@ -160,17 +145,17 @@ export const Section1 = styled.section`
                     transition: all .7s ease;
                 }
 
-                :before {
+                &:before {
                     width: 110%;
                     height: 0;
                     transform: translate(-50%, -50%) rotate(45deg);
                 }
 
-                :hover {
+                &:hover {
                     font-size: 1.2rem;
                     color: #014034;
 
-                :before {
+                &:before {
                     height: 400%;
                 }
             }
@@ -292,4 +277,67 @@ export const Section1 = styled.section`
             }
         }
     } 
+`;
+
+export const Section2 = styled.section`
+    padding: 5rem 5rem;
+    justify-content: center;
+    text-align: center;
+    background: #015041;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    h2{
+        margin-bottom: 3rem;
+        color: #36BFB1;
+        font-weight: 800;
+        font-size: 48px;
+        line-height: 58px; 
+    }
+
+    .containerTecnologias {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 70%;
+
+    .Tecnologias {
+        width: 150px;
+        height: 150px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.5s;
+        position: relative;
+
+        span {
+            font-size: 5rem;
+            color: #fff;
+            position: absolute;
+        }
+
+        p {
+            color: #00ffff;
+            font-size: 1.5rem;
+            display: none;
+            font-weight: bold;
+        }
+
+        &:hover {
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 50%;
+
+            span {
+                color: rgba(255, 255, 255, 0.2);
+            }
+
+            p {
+                display: block;
+            }
+        }
+    }
+    }
 `;

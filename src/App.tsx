@@ -1,7 +1,11 @@
-import { AiFillLinkedin, AiFillCode } from 'react-icons/ai';
-import { BsGithub } from 'react-icons/bs';
+import { AiFillLinkedin, AiFillCode, AiOutlineHtml5 } from 'react-icons/ai';
+import { BsGithub, BsGit } from 'react-icons/bs';
+import { DiCss3 } from 'react-icons/di';
+import { FaJava, FaNodeJs, FaReact, FaVuejs } from 'react-icons/fa';
+import { GrDocker } from 'react-icons/gr';
+import { SiJavascript, SiKotlin, SiMysql, SiSpring, SiTypescript } from 'react-icons/si';
 
-import { Section1 } from "./App.style"
+import { Section1, Section2 } from "./App.style"
 
 function App() {
 
@@ -43,6 +47,25 @@ function App() {
           </div>
         </main>
       </Section1>
+      <Section2>
+          <h2>Conhecimentos</h2>
+
+        <div className='containerTecnologias'>
+          <div className="Tecnologias"><span><AiOutlineHtml5 /></span><p>HTML 5</p></div>
+          <div className="Tecnologias"><span><DiCss3 /></span><p>CSS 3</p></div>
+          <div className="Tecnologias"><span><SiJavascript /></span><p>JavaScript</p></div>
+          <div className="Tecnologias"><span><SiTypescript /></span><p>TypeScript</p></div>
+          <div className="Tecnologias"><span><FaReact/></span><p>React</p></div>
+          <div className="Tecnologias"><span><FaVuejs /></span><p>VUE</p></div>
+          <div className="Tecnologias"><span><GrDocker /></span><p>Docker</p></div>
+          <div className="Tecnologias"><span><FaJava /></span><p>Java</p></div>
+          <div className="Tecnologias"><span><SiKotlin /></span><p>Kotlin</p></div>
+          <div className="Tecnologias"><span><BsGit /></span><p>Git</p></div>
+          <div className="Tecnologias"><span><SiMysql /></span><p>MySQL</p></div>
+          <div className="Tecnologias"><span><FaNodeJs /></span><p>Node.js</p></div>
+          <div className="Tecnologias"><span><SiSpring /></span><p>Spring</p></div> 
+        </div>
+      </Section2>
     </>
   )
 }
