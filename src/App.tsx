@@ -3,11 +3,39 @@ import { BsGithub, BsGit } from 'react-icons/bs';
 import { DiCss3 } from 'react-icons/di';
 import { FaJava, FaNodeJs, FaReact, FaVuejs } from 'react-icons/fa';
 import { GrDocker } from 'react-icons/gr';
-import { SiJavascript, SiKotlin, SiMysql, SiSpring, SiTypescript } from 'react-icons/si';
+import { SiJavascript, SiKotlin, SiMysql, SiSpring, SiStyledcomponents, SiTypescript, SiRedux } from 'react-icons/si';
+import imgPokedex1 from '/img/pokemon1.png';
+import imgPokedex2 from '/img/pokemon2.png';
+import imgPokedex3 from '/img/pokemon3.png';
+import imgVueBurguer1 from '/img/vueBurguer1.png';
+import imgVueBurguer2 from '/img/vueBurguer2.png';
+import imgVueBurguer3 from '/img/vueBurguer3.png';
+import imgSiteCurso1 from '/img/siteCursos1.png';
+import imgSiteCurso2 from '/img/siteCursos2.png';
+import imgSiteCurso3 from '/img/siteCursos3.png';
 
-import { Section1, Section2 } from "./App.style"
+import { Section1, Section2, Section3 } from "./App.style"
+import { useEffect, useState } from 'react';
 
 function App() {
+
+const imgsPokedex = [imgPokedex1, imgPokedex2, imgPokedex3];
+const imgsVueBurguer = [imgVueBurguer1, imgVueBurguer2, imgVueBurguer3];
+const imgsSiteCursp = [imgSiteCurso1, imgSiteCurso2, imgSiteCurso3]
+
+const [contador, setContador] = useState(0);
+
+function iniciarContador() {
+  setContador(contador+1)
+
+    if (contador >= 2) {
+      setContador(0)
+  }
+} 
+
+useEffect(() => {
+  setTimeout(iniciarContador, 1500);
+},[contador])
 
   return (
     <>
@@ -66,6 +94,74 @@ function App() {
           <div className="Tecnologias"><span><SiSpring /></span><p>Spring</p></div> 
         </div>
       </Section2>
+      <Section3>
+        <h2>Projetos</h2>
+
+          <div id='containerProjetos'>
+            <div className='projetos'>
+              <img src={imgPokedex1} alt="Capa do site pokedex" />
+              <img src={imgsPokedex[contador]} alt="Imagens do site" />
+              <div className='infoProjeto'>
+                <h2>Pokedex</h2>
+                <ul>
+                  <li><FaReact /></li>
+                  <li><SiTypescript /></li>
+                  <li><SiStyledcomponents /></li>
+                  <li><SiRedux /></li>
+                </ul>
+              </div>
+              <div className='descricaoProjeto'>
+                <p >Projeto feito com React, nele tem uma lista de 151 pokémons,que é pega de uma API. O ptojeto tambem inclui página de detalhes sobre o pokémon e uma página de favoritos onde você pode salvar seus pokémons favoritos.</p>
+              </div>
+              <div className='containerLink'>
+                  <a href="https://pokedex-kwrvqhbh6-josepps.vercel.app/" target='_blank'>Site</a>
+                  <a href="https://github.com/josepps/pokedex" target='_blank'>Repositório</a>
+              </div>
+            </div>
+
+            <div className='projetos'>
+              <img src={imgVueBurguer1} alt="Capa do site pokedex" />
+              <img src={imgsVueBurguer[contador]} alt="Imagens do site" />
+              <div className='infoProjeto'>
+                <h2>VueBurguer</h2>
+                <ul>
+                  <li><FaVuejs /></li>
+                  <li><GrDocker /></li>
+                </ul>
+              </div>
+              <div className='descricaoProjeto'>
+                <p >O vue-hamburguer é um projeto onde tem a parte do cliente, que pede os hamburguers, e a parte da hamburgueria, que recebe esse pedido e vai avançando ele, de recebido até pronto.</p>
+              </div>
+              <div className='containerLink'>
+                  <a href="https://github.com/josepps/vue-hamburguer" target='_blank'>Repositório</a>
+              </div>
+            </div>
+
+            <div className='projetos'>
+              <img src={imgSiteCurso1} alt="Capa do site pokedex" />
+              <img src={imgsSiteCursp[contador]} alt="Imagens do site" />
+              <div className='infoProjeto'>
+                <h2>site de cursos</h2>
+                <ul>
+                  <li><AiOutlineHtml5 /></li>
+                  <li><DiCss3 /></li>
+                </ul>
+              </div>
+              <div className='descricaoProjeto'>
+                <p >Esse foi o primeiro site que eu fiz, foi o primeiro HandsOn do xp44.
+                    Um site para uma empresa fictícia de cursos de financias.
+                    Recebi o figma do projeto que e tive que fazer todo o HTML e CSS.
+                    Site responsivo para, tablets e celulares (não engloba todos os dispositivos)
+                </p>
+              </div>
+              <div className='containerLink'>
+                <a href="https://josepps.github.io/site-de-cursos/" target='_blank'>Site</a>
+                <a href="https://github.com/josepps/site-de-cursos" target='_blank'>Repositório</a>
+              </div>
+            </div>
+          </div>
+          
+      </Section3>
     </>
   )
 }
