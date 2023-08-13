@@ -1,5 +1,6 @@
 import { AiFillLinkedin, AiFillCode, AiOutlineHtml5 } from 'react-icons/ai';
-import { BsGithub, BsGit } from 'react-icons/bs';
+import { BsGithub, BsGit, BsWhatsapp } from 'react-icons/bs';
+import { CgMail } from 'react-icons/cg';
 import { DiCss3 } from 'react-icons/di';
 import { FaJava, FaNodeJs, FaReact, FaVuejs } from 'react-icons/fa';
 import { GrDocker } from 'react-icons/gr';
@@ -14,7 +15,7 @@ import imgSiteCurso1 from '/img/siteCursos1.png';
 import imgSiteCurso2 from '/img/siteCursos2.png';
 import imgSiteCurso3 from '/img/siteCursos3.png';
 
-import { Section1, Section2, Section3 } from "./App.style"
+import { Section1, Section2, Section3, Section4 } from "./App.style"
 import { useEffect, useState } from 'react';
 
 function App() {
@@ -39,7 +40,7 @@ useEffect(() => {
 
   return (
     <>
-      <Section1>
+      <Section1 id='section1'>
         <header>
           <div>
             <h2>José Santos</h2>
@@ -47,10 +48,10 @@ useEffect(() => {
           <div className="containerNav">
             <nav>
               <ul>
-                <li><a href="#">Início</a></li>
-                <li><a href="#">Conhecimentos</a></li>
-                <li><a href="#">Projetos</a></li>
-                <li><a href="#">Contatos</a></li>
+                <li><a href="#section1">Início</a></li>
+                <li><a href="#section2">Conhecimentos</a></li>
+                <li><a href="#section3">Projetos</a></li>
+                <li><a href="#section4">Contatos</a></li>
               </ul>
             </nav>
           </div>
@@ -59,7 +60,7 @@ useEffect(() => {
           <div className="containerMain">
             <h1>Desenvolvedor <br /> Fullstack</h1>
             <p className="descricao">No mundo da programação desde Junho de 2022!</p>
-            <a href="">Contatos</a>
+            <a href="#section4">Contatos</a>
           </div>
           <div className="containerMain">
             <div className="container">
@@ -75,7 +76,7 @@ useEffect(() => {
           </div>
         </main>
       </Section1>
-      <Section2>
+      <Section2 id='section2'>
           <h2>Conhecimentos</h2>
 
         <div className='containerTecnologias'>
@@ -94,7 +95,7 @@ useEffect(() => {
           <div className="Tecnologias"><span><SiSpring /></span><p>Spring</p></div> 
         </div>
       </Section2>
-      <Section3>
+      <Section3 id='section3'>
         <h2>Projetos</h2>
 
           <div id='containerProjetos'>
@@ -162,6 +163,32 @@ useEffect(() => {
           </div>
           
       </Section3>
+      <Section4 id='section4'>
+        <h2>Contado</h2>
+        <div className='containerContatos'>
+            <a href='https://api.whatsapp.com/send?phone=5581996694886&text=Ol%C3%A1,%20vim%20atrav%C3%A9s%20do%20seu%20portf%C3%B3lio!' target='_blank'>
+              <span><BsWhatsapp /></span>
+              <h3>whatsapp</h3>
+              <p>(81) 99669-4886</p>
+            </a>
+            <a href='https://www.linkedin.com/in/jos%C3%A9-santos-dev/' target='_blank'>
+              <span><AiFillLinkedin /></span>
+              <h3>Linkedin</h3>
+              <p>@josé-santos-dev</p>
+            </a>
+            <a href='https://github.com/josepps' target='_blank'>
+              <span><BsGithub /></span>
+              <h3>GitHub</h3>
+              <p>@josepps</p>
+            </a>
+            <a href='mailto:joseppsantanafs@gmail.com' target='_blank'>
+              <span><CgMail /></span>
+              <h3>E-email</h3>
+              <p>joseppsantanafs@gmail.com</p>
+            </a>
+        </div>
+        
+      </Section4>
     </>
   )
 }

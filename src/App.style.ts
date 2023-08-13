@@ -510,3 +510,58 @@ export const Section3 = styled.section`
     }
 
 `;
+
+export const Section4 = styled.section`
+    width: 100vw;
+    height: 70vh;
+    background: #038C73;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h2 {
+        width: 100%;
+        height: 25%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 3rem;
+        color: #53ecec;
+    }
+
+    .containerContatos{
+        width: 100%;
+        display: flex;
+        height: 75%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+            a {
+                width: 20%;
+                margin: 5% 0;
+                text-align: center;
+                color: #fff;
+                text-decoration: none;
+
+                span {
+                    width: 100px;
+                    border-radius: 50%;
+                    font-size: 2.5rem;
+                }
+
+                h3 {
+                    margin: 15% 0 10% 0;
+                }
+
+                &:hover {
+                    span {
+                        font-size: 3rem;
+                    }
+                    h3 {
+                        transform: scale(1.4);
+                    }
+                }
+            }
+    }
+`;
