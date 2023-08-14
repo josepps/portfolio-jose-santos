@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const Section1 = styled.section`
-    background: linear-gradient( #014034 50%, #02735E );
+    background: linear-gradient( #003249 50%, #007EA7 );
     width: 100vw;
     height: 100vh;
 
@@ -11,11 +11,13 @@ export const Section1 = styled.section`
         display: flex;
         align-items: center;
         justify-content: space-between;
+        position: fixed;
+        z-index: 99;
         padding: 0 5%;
-        background: linear-gradient(rgba(13, 13, 13, .9), #014034);
+        background: linear-gradient(rgba(11, 11, 11, .8), #003249);
 
         h2 {
-            color: #36BFB1;
+            color: #80CED7;
         }
 
         .containerNav {
@@ -31,7 +33,7 @@ export const Section1 = styled.section`
 
                 a {
                 text-decoration: none;
-                color: #038C73;
+                color: #80CED7;
                 font-weight: 600;
                 font-size: 1rem;
                 position: relative;
@@ -43,7 +45,7 @@ export const Section1 = styled.section`
                 height: 2px;
                 bottom: -5px;
                 left: 0;
-                background-color: #038C73;
+                background-color: #80CED7;
                 visibility: hidden;
                 -webkit-transform: scaleX(0);
                 transform: scaleX(0);
@@ -52,7 +54,7 @@ export const Section1 = styled.section`
                 }
 
                 &:hover {
-                color: #36BFB1;
+                color: #80CED7;
                 font-size: 1.1rem;
                 
                 &:before {
@@ -83,31 +85,42 @@ export const Section1 = styled.section`
 
             h1 {
                 font-size: 3.5rem;
-                color: #36BFB1;
+                color: #9AD1D4;
             }
 
             .descricao {
+                width: 0;
                 margin: 2.5% 0 3.5% 7.5%;
-                color: #9ce3db;
+                color: #80CED7;
                 font-size: 1.2rem;
-                border-right: 2px solid #36BFB1;
+                border-right: 2px solid #80CED7;
                 white-space: nowrap;
                 overflow: hidden;
-                animation: piscaCursor 600ms steps(45) infinite normal, digitandoDescricao 4s steps(40) 1s normal both;
+                animation: piscaCursor 600ms steps(45) infinite normal, 
+                digitandoDescricao 8s steps(40) 1s infinite;
             }
 
             @keyframes digitandoDescricao {
-                from {
+                0% {
                     width: 0;
                 }
-                to {
+                45% {
                     width: 50%;
+                }
+                55% {
+                    width: 50%;
+                }
+                90% {
+                    width: 0;
+                }
+                100% {
+                    width: 0;
                 }
             }
 
             @keyframes piscaCursor {
                     from {
-                        border-right-color: #36BFB1;
+                        border-right-color: #80CED7;
                     }
                     to {
                         border-right-color: transparent;
@@ -121,8 +134,8 @@ export const Section1 = styled.section`
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                background-color: rgba(1, 64, 52, .9);
-                color: #9ce3db;
+                background-color: #003249;
+                color: #9AD1D4;
                 font-weight: 600;
                 font-size: 1.1rem;
                 border-radius: 15px;
@@ -140,7 +153,7 @@ export const Section1 = styled.section`
                     transform: translate(-50%, -50%);
                     width: 100%;
                     height: 100%;
-                    background-color: #02735E;
+                    background-color: #007EA7;
                     z-index: -1;
                     transition: all .7s ease;
                 }
@@ -153,7 +166,7 @@ export const Section1 = styled.section`
 
                 &:hover {
                     font-size: 1.2rem;
-                    color: #014034;
+                    color: #003249;
 
                 &:before {
                     height: 400%;
@@ -171,7 +184,7 @@ export const Section1 = styled.section`
                 height: 60vh;
                 width: 30vw;
                 position: absolute;
-                top: 20vh;
+                top: 25vh;
                 right: 15vw;
                 perspective: 1000px;
             }
@@ -210,7 +223,7 @@ export const Section1 = styled.section`
                 text-align: center;
                 padding: 100px 0;
                 color: white;
-                background-image: radial-gradient(circle, #038c73, #03876f, #02826b, #027e67, #027963, #02735e, #016c58, #016653, #015c4b, #015343, #01493c, #014034);
+                background: radial-gradient(circle, rgba(128,206,215,1) 0%, rgba(0,126,167,1) 30%, rgba(0,50,73,1) 100%);
                 border: 2px solid white;
                 font-size: 32px;
                 box-sizing: border-box;
@@ -283,7 +296,7 @@ export const Section2 = styled.section`
     padding: 5rem 5rem;
     justify-content: center;
     text-align: center;
-    background: #015041;
+    background: linear-gradient( #007EA7 50%, #80CED7 );
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -291,7 +304,7 @@ export const Section2 = styled.section`
 
     h2{
         margin-bottom: 3rem;
-        color: #36BFB1;
+        color: #CCDBDC;
         font-weight: 800;
         font-size: 48px;
         line-height: 58px; 
@@ -320,7 +333,7 @@ export const Section2 = styled.section`
         }
 
         p {
-            color: #00ffff;
+            color: #CCDBDC;
             font-size: 1.5rem;
             display: none;
             font-weight: bold;
@@ -345,14 +358,14 @@ export const Section2 = styled.section`
 export const Section3 = styled.section`
     width: 100%;
     height: auto;
-    background: #02735E;
+    background: linear-gradient( #80CED7 50%, #9AD1D4 );
 
     h2 {
         height: 15vh;
         display: flex;
         align-items: center;
         justify-content: center;
-        color: #00ffff;
+        color: #007EA7;
         font-size: 2rem;
     }
 
@@ -396,7 +409,7 @@ export const Section3 = styled.section`
             .containerLink{
                 position: absolute;
                 bottom: 0;
-                background: #014034;
+                background: #58b0ba;
                 width: 100%;
                 height: 0;
                 border-radius: 0 0 15px 15px;
@@ -414,8 +427,8 @@ export const Section3 = styled.section`
                     justify-content: center;
                     color: #fff;
                     text-decoration: none;
-                    background: #038C73;
-                    border: 1px solid #038C73;
+                    background: #498b92;
+                    border: 1px solid #498b92;
                     scale: 0.9;
                     border-radius: 10px;
                     font-size: 0.9rem;
@@ -446,9 +459,9 @@ export const Section3 = styled.section`
 
                 h2 {
                     height: 30%;
-                    color: #40ffff;
+                    color: #007EA7;
                     font-size: 2.5rem;
-                    -webkit-text-stroke: 1px #038C73;
+                    -webkit-text-stroke: 1px #003249;
                 }
 
                 ul {
@@ -458,7 +471,7 @@ export const Section3 = styled.section`
                     li {
                         margin: 0 3px;
                         font-size: 1.5rem;
-                        color: #00ffff;
+                        color: #80CED7;
 
                         &:nth-child(3) {
                             font-size: 2rem;
@@ -514,7 +527,7 @@ export const Section3 = styled.section`
 export const Section4 = styled.section`
     width: 100vw;
     height: 70vh;
-    background: #038C73;
+    background: linear-gradient( #9AD1D4 50%, #CCDBDC );
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -526,7 +539,7 @@ export const Section4 = styled.section`
         align-items: center;
         justify-content: center;
         font-size: 3rem;
-        color: #53ecec;
+        color: #007EA7;
     }
 
     .containerContatos{
@@ -541,7 +554,7 @@ export const Section4 = styled.section`
                 width: 20%;
                 margin: 5% 0;
                 text-align: center;
-                color: #fff;
+                color: #007EA7;
                 text-decoration: none;
 
                 span {
