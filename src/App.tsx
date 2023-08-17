@@ -27,17 +27,14 @@ const imgsSiteCursp = [imgSiteCurso1, imgSiteCurso2, imgSiteCurso3]
 
 const [contador, setContador] = useState(0);
 
-function iniciarContador() {
-  setContador(contador+1)
-
-    if (contador >= 2) {
-      setContador(0)
+  function iniciarContador() {
+    setContador(prevContador => (prevContador + 1) % 3);
   }
-} 
 
-useEffect(() => {
-  setTimeout(iniciarContador, 1500);
-},[contador])
+  useEffect(() => {
+    setTimeout(iniciarContador, 1500);
+  }, [contador]);
+
 
   return (
     <>
