@@ -14,6 +14,7 @@ import imgVueBurguer3 from '/img/vueBurguer3.png';
 import imgSiteCurso1 from '/img/siteCursos1.png';
 import imgSiteCurso2 from '/img/siteCursos2.png';
 import imgSiteCurso3 from '/img/siteCursos3.png';
+import IconeTecnologia from './Components/Iconetecnologia/Index';
 
 import { Section1, Section2, Section3, Section4 } from "./App.style"
 import { useEffect, useState } from 'react';
@@ -80,19 +81,19 @@ useEffect(() => {
           <h2>Conhecimentos</h2>
 
         <div className='containerTecnologias'>
-          <div className="Tecnologias"><span><AiOutlineHtml5 /></span><p>HTML 5</p></div>
-          <div className="Tecnologias"><span><DiCss3 /></span><p>CSS 3</p></div>
-          <div className="Tecnologias"><span><SiJavascript /></span><p>JavaScript</p></div>
-          <div className="Tecnologias"><span><SiTypescript /></span><p>TypeScript</p></div>
-          <div className="Tecnologias"><span><FaReact/></span><p>React</p></div>
-          <div className="Tecnologias"><span><FaVuejs /></span><p>VUE</p></div>
-          <div className="Tecnologias"><span><GrDocker /></span><p>Docker</p></div>
-          <div className="Tecnologias"><span><FaJava /></span><p>Java</p></div>
-          <div className="Tecnologias"><span><SiKotlin /></span><p>Kotlin</p></div>
-          <div className="Tecnologias"><span><BsGit /></span><p>Git</p></div>
-          <div className="Tecnologias"><span><SiMysql /></span><p>MySQL</p></div>
-          <div className="Tecnologias"><span><FaNodeJs /></span><p>Node.js</p></div>
-          <div className="Tecnologias"><span><SiSpring /></span><p>Spring</p></div> 
+          <IconeTecnologia icone={<AiOutlineHtml5 />} descricao="HTML 5" />
+          <IconeTecnologia icone={<DiCss3 />} descricao="CSS 3" />
+          <IconeTecnologia icone={<SiJavascript />} descricao="JavaScript" />
+          <IconeTecnologia icone={<SiTypescript />} descricao="TypeScript" />
+          <IconeTecnologia icone={<FaReact/>} descricao="React" />
+          <IconeTecnologia icone={<FaVuejs />} descricao="VUE" />
+          <IconeTecnologia icone={<GrDocker />} descricao="Docker" />
+          <IconeTecnologia icone={<FaJava />} descricao="Java" />
+          <IconeTecnologia icone={<SiKotlin />} descricao="Kotlin" />
+          <IconeTecnologia icone={<BsGit />} descricao="Git" />
+          <IconeTecnologia icone={<SiMysql />} descricao="MySQL" />
+          <IconeTecnologia icone={<FaNodeJs />} descricao="NodeJS" />
+          <IconeTecnologia icone={<SiSpring />} descricao="Spring" />
         </div>
       </Section2>
       <Section3 id='section3'>
