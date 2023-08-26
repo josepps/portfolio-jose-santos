@@ -1,3 +1,5 @@
+import { IconesTecnologias } from "./IconeTecnologia.style";
+
 type IconeTecnologiaProps = {
     icone: React.ReactNode;
     descricao: string;
@@ -5,10 +7,10 @@ type IconeTecnologiaProps = {
 
 function IconeTecnologia(props: IconeTecnologiaProps) {
     return (
-        <div className="Tecnologias">
+        <IconesTecnologias>
             <span>{props.icone}</span>
             <p>{props.descricao}</p>
-        </div>
+        </IconesTecnologias>
     )
 }
 

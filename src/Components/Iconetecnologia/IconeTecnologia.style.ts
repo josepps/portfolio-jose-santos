@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const Section2 = styled.div`
+export const IconesTecnologias = styled.div`
     width: 150px;
     height: 150px;
     display: flex;
