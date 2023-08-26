@@ -15,6 +15,8 @@ import imgSiteCurso1 from '/img/siteCursos1.png';
 import imgSiteCurso2 from '/img/siteCursos2.png';
 import imgSiteCurso3 from '/img/siteCursos3.png';
 import IconeTecnologia from './Components/Iconetecnologia/Index';
+import Projeto from './Components/Projetos';
+import Contato from './Components/Contato';
 
 import { Section1, Section2, Section3, Section4 } from "./App.style"
 import { useEffect, useState } from 'react';
@@ -27,14 +29,13 @@ const imgsSiteCursp = [imgSiteCurso1, imgSiteCurso2, imgSiteCurso3]
 
 const [contador, setContador] = useState(0);
 
-  function iniciarContador() {
+  function contar() {
     setContador(prevContador => (prevContador + 1) % 3);
   }
 
   useEffect(() => {
-    setTimeout(iniciarContador, 1500);
+    setTimeout(contar, 1500);
   }, [contador]);
-
 
   return (
     <>
@@ -97,93 +98,68 @@ const [contador, setContador] = useState(0);
         <h2>Projetos</h2>
 
           <div id='containerProjetos'>
-            <div className='projetos'>
-              <img src={imgPokedex1} alt="Capa do site pokedex" />
-              <img src={imgsPokedex[contador]} alt="Imagens do site" />
-              <div className='infoProjeto'>
-                <h2>Pokedex</h2>
-                <ul>
-                  <li><FaReact /></li>
-                  <li><SiTypescript /></li>
-                  <li><SiStyledcomponents /></li>
-                  <li><SiRedux /></li>
-                </ul>
-              </div>
-              <div className='descricaoProjeto'>
-                <p >Projeto feito com React, nele tem uma lista de 151 pokémons,que é pega de uma API. O ptojeto tambem inclui página de detalhes sobre o pokémon e uma página de favoritos onde você pode salvar seus pokémons favoritos.</p>
-              </div>
-              <div className='containerLink'>
-                  <a href="https://pokedex-kwrvqhbh6-josepps.vercel.app/" target='_blank'>Site</a>
-                  <a href="https://github.com/josepps/pokedex" target='_blank'>Repositório</a>
-              </div>
-            </div>
-
-            <div className='projetos'>
-              <img src={imgVueBurguer1} alt="Capa do site pokedex" />
-              <img src={imgsVueBurguer[contador]} alt="Imagens do site" />
-              <div className='infoProjeto'>
-                <h2>VueBurguer</h2>
-                <ul>
-                  <li><FaVuejs /></li>
-                  <li><GrDocker /></li>
-                </ul>
-              </div>
-              <div className='descricaoProjeto'>
-                <p >O vue-hamburguer é um projeto onde tem a parte do cliente, que pede os hamburguers, e a parte da hamburgueria, que recebe esse pedido e vai avançando ele, de recebido até pronto.</p>
-              </div>
-              <div className='containerLink'>
-                  <a href="https://github.com/josepps/vue-hamburguer" target='_blank'>Repositório</a>
-              </div>
-            </div>
-
-            <div className='projetos'>
-              <img src={imgSiteCurso1} alt="Capa do site pokedex" />
-              <img src={imgsSiteCursp[contador]} alt="Imagens do site" />
-              <div className='infoProjeto'>
-                <h2>site de cursos</h2>
-                <ul>
-                  <li><AiOutlineHtml5 /></li>
-                  <li><DiCss3 /></li>
-                </ul>
-              </div>
-              <div className='descricaoProjeto'>
-                <p >Esse foi o primeiro site que eu fiz, foi o primeiro HandsOn do xp44.
-                    Um site para uma empresa fictícia de cursos de financias.
-                    Recebi o figma do projeto que e tive que fazer todo o HTML e CSS.
-                    Site responsivo para, tablets e celulares (não engloba todos os dispositivos)
-                </p>
-              </div>
-              <div className='containerLink'>
-                <a href="https://josepps.github.io/site-de-cursos/" target='_blank'>Site</a>
-                <a href="https://github.com/josepps/site-de-cursos" target='_blank'>Repositório</a>
-              </div>
-            </div>
+            <Projeto 
+              Src= {imgPokedex1}
+              Alt= "Capa do site pokedex"
+              SrcColecao= {imgsPokedex[contador]}
+              AltColecao= "Imagens do site"
+              Titulo= "Pokedex"
+              Tecnologias= {[<FaReact />, <SiTypescript />, <SiStyledcomponents />, <SiRedux />]}
+              Descricao= "Projeto feito com React, nele tem uma lista de 151 pokémons,que é pega de uma API. O ptojeto tambem inclui página de detalhes sobre o pokémon e uma página de favoritos onde você pode salvar seus pokémons favoritos."
+              HrefSite= "https://pokedex-kwrvqhbh6-josepps.vercel.app/"
+              HrefRepo= "https://github.com/josepps/pokedex" 
+            />
+            <Projeto 
+              Src= {imgVueBurguer1}
+              Alt= "Capa do site VueBurguer"
+              SrcColecao= {imgsVueBurguer[contador]}
+              AltColecao= "Imagens do site"
+              Titulo= "VueBurguer"
+              Tecnologias= {[<FaVuejs />, <GrDocker />]}
+              Descricao= "O vue-hamburguer é um projeto onde tem a parte do cliente, que pede os hamburguers, e a parte da hamburgueria, que recebe esse pedido e vai avançando ele, de recebido até pronto."
+              HrefRepo= "https://github.com/josepps/vue-hamburguer" 
+            />
+            <Projeto 
+              Src= {imgSiteCurso1}
+              Alt= "Capa do site de Cursos"
+              SrcColecao= {imgsSiteCursp[contador]}
+              AltColecao= "Imagens do site"
+              Titulo= "site de cursos"
+              Tecnologias= {[<AiOutlineHtml5 />, <DiCss3 />]}
+              Descricao= "Esse foi o primeiro site que eu fiz, foi o primeiro HandsOn do xp44. Um site para uma empresa fictícia de cursos de financias. Recebi o figma do projeto que e tive que fazer todo o HTML e CSS. Site responsivo para, tablets e celulares (não engloba todos os dispositivos)."
+              HrefSite= "https://josepps.github.io/site-de-cursos/"
+              HrefRepo= "https://github.com/josepps/site-de-cursos" 
+            />
           </div>
           
       </Section3>
       <Section4 id='section4'>
         <h2>Contatos</h2>
         <div className='containerContatos'>
-            <a href='https://api.whatsapp.com/send?phone=5581996694886&text=Ol%C3%A1,%20vim%20atrav%C3%A9s%20do%20seu%20portf%C3%B3lio!' target='_blank'>
-              <span><BsWhatsapp /></span>
-              <h3>whatsapp</h3>
-              <p>(81) 99669-4886</p>
-            </a>
-            <a href='https://www.linkedin.com/in/jos%C3%A9-santos-dev/' target='_blank'>
-              <span><AiFillLinkedin /></span>
-              <h3>Linkedin</h3>
-              <p>@josé-santos-dev</p>
-            </a>
-            <a href='https://github.com/josepps' target='_blank'>
-              <span><BsGithub /></span>
-              <h3>GitHub</h3>
-              <p>@josepps</p>
-            </a>
-            <a href='mailto:joseppsantanafs@gmail.com' target='_blank'>
-              <span><CgMail /></span>
-              <h3>E-email</h3>
-              <p>joseppsantanafs@gmail.com</p>
-            </a>
+            <Contato
+              href= "https://api.whatsapp.com/send?phone=5581996694886&text=Ol%C3%A1,%20vim%20atrav%C3%A9s%20do%20seu%20portf%C3%B3lio!"
+              icone= {<AiOutlineHtml5 />}
+              titulo= "whatsapp"
+              descricao= "(81) 99669-4886"
+            />
+            <Contato
+              href= "https://www.linkedin.com/in/jos%C3%A9-santos-dev/"
+              icone= {<AiFillLinkedin />}
+              titulo= "Linkedin"
+              descricao= "@josé-santos-dev"
+            />
+            <Contato
+              href= "https://github.com/josepps"
+              icone= {<BsGithub />}
+              titulo= "GitHub"
+              descricao= "@josepps"
+            />
+            <Contato
+              href= "mailto:joseppsantanafs@gmail.com"
+              icone= {<CgMail />}
+              titulo= "E-email"
+              descricao= "joseppsantanafs@gmail.com"
+            />
         </div>
         
       </Section4>
