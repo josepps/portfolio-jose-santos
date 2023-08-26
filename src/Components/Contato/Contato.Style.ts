@@ -18,6 +18,8 @@ export const ContatoStyle = styled.a `
         }
 
         &:hover {
+            color: #0d5e78;
+
             span {
                 font-size: 3rem;
             }

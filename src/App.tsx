@@ -138,7 +138,7 @@ const [contador, setContador] = useState(0);
         <div className='containerContatos'>
             <Contato
               href= "https://api.whatsapp.com/send?phone=5581996694886&text=Ol%C3%A1,%20vim%20atrav%C3%A9s%20do%20seu%20portf%C3%B3lio!"
-              icone= {<AiOutlineHtml5 />}
+              icone= {<BsWhatsapp />}
               titulo= "whatsapp"
               descricao= "(81) 99669-4886"
             />
