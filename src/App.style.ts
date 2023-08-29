@@ -54,7 +54,7 @@ export const Section1 = styled.section`
                 }
 
                 &:hover {
-                color: #80CED7;
+                color: #c5e4e7;
                 font-size: 1.1rem;
                 
                 &:before {
@@ -65,6 +65,133 @@ export const Section1 = styled.section`
                 }
                 }
 
+            }
+        }
+
+        @media screen and (max-width: 1200px) {
+            .containerNav {
+                margin-right: 10%;
+            }
+        }
+        @media screen and (max-width: 950px) {
+            .containerNav {
+                margin-right: 20%;
+            }
+        }
+        @media screen and (max-width: 750px) {
+            .containerNav { 
+                nav {
+                        width: 100vw; 
+                        height: 100vh;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        background: #003249;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        animation: aparecerNav 0.3s ease-in forwards;
+                        transform: translateX(100%);
+                        transition: transform 0.3s ease-in;
+
+                        ul {
+                        flex-direction: column;
+                        align-items: center;
+
+                        li {
+                            margin: 10px 0;
+                            visibility: hidden;
+                            -webkit-transform: scaleX(0);
+                            transform: scaleX(0);
+                            -webkit-transition: all 0.3s ease-in-out 0.3s;
+                            transition: all 0.3s ease-in-out 0.3s;
+                            
+                            a {
+                                font-size: 2rem;
+                            
+                                &:hover {
+                                font-size: 2.1rem;
+                                }
+                            }
+                        }
+                    }
+                    }
+
+                .menuHamburguer {
+                    display: block;
+                    align-items: center;
+                    justify-content: center;
+                    width: 40px;
+                    height: 30%;
+                    position: absolute;
+                    top: 35px;
+                    right: 10%;
+                    cursor: pointer;
+                    z-index: 999;
+
+                    span {
+                        background: #fff;
+                        display: block;
+                        width: 40px;
+                        height: 5px;
+                        margin: 5px 0;
+                        position: absolute;
+                        top: 20%;
+                        left: 0;
+                        transition: left 0.3s ease-in;
+                    }
+
+                        &::before {
+                            content: "";
+                            background: #fff;
+                            width: 40px;
+                            height: 5px;
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            top: 0;
+                            transform: rotate(0deg);
+                            transition: all 0.3s ease-in;
+                        }
+
+                        &::after {
+                            content: "";
+                            background: #fff;
+                            width: 40px;
+                            height: 5px;
+                            position: absolute;
+                            bottom: 0;
+                            left: 0;
+                            transform: rotate(0deg);
+                            transition: all 0.3s ease-in;
+                        }
+
+                        &.ativo {
+                            span {
+                            left: 100px;
+                            }
+                            
+                            &::before {
+                                top: 50%;
+                                transform: rotate(135deg)
+                            }
+
+                            &::after {
+                                bottom: 30%;
+                                transform: rotate(-135deg);
+                            } 
+                        }
+                }
+
+                &.ativo nav {
+                    transform: translateX(0);
+
+                    ul li {
+                            visibility: visible;
+                            -webkit-transform: scaleX(1);
+                            transform: scaleX(1);
+                    }
+                }
             }
         }
     }

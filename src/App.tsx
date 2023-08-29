@@ -16,7 +16,7 @@ import imgSiteCurso2 from '/img/siteCursos2.png';
 import imgSiteCurso3 from '/img/siteCursos3.png';
 import IconeTecnologia from './Components/Iconetecnologia/Index';
 import Projeto from './Components/Projetos';
-import Contato from './Components/Contato';
+import Contato from './Components/Contato/Index';
 
 import { Section1, Section2, Section3, Section4 } from "./App.style"
 import { useEffect, useState } from 'react';
@@ -28,10 +28,15 @@ const imgsVueBurguer = [imgVueBurguer1, imgVueBurguer2, imgVueBurguer3];
 const imgsSiteCursp = [imgSiteCurso1, imgSiteCurso2, imgSiteCurso3]
 
 const [contador, setContador] = useState(0);
+const [estaAtivo, setEstaAtivo] = useState(false);
 
   function contar() {
     setContador(prevContador => (prevContador + 1) % 3);
   }
+
+  const alternarMenu = () => {
+    setEstaAtivo(!estaAtivo);
+  };
 
   useEffect(() => {
     setTimeout(contar, 1500);
@@ -44,13 +49,16 @@ const [contador, setContador] = useState(0);
           <div>
             <h2>José Santos</h2>
           </div>
-          <div className="containerNav">
+          <div className={`containerNav ${estaAtivo ? 'ativo' : ''}`}>
+            <div className={`menuHamburguer ${estaAtivo ? 'ativo' : ''}`} onClick={alternarMenu}>
+              <span></span>
+            </div>
             <nav>
               <ul>
-                <li><a href="#section1">Início</a></li>
-                <li><a href="#section2">Conhecimentos</a></li>
-                <li><a href="#section3">Projetos</a></li>
-                <li><a href="#section4">Contatos</a></li>
+                <li><a href="#section1" onClick={alternarMenu}>Início</a></li>
+                <li><a href="#section2" onClick={alternarMenu}>Conhecimentos</a></li>
+                <li><a href="#section3" onClick={alternarMenu}>Projetos</a></li>
+                <li><a href="#section4" onClick={alternarMenu}>Contatos</a></li>
               </ul>
             </nav>
           </div>
@@ -131,7 +139,6 @@ const [contador, setContador] = useState(0);
               HrefRepo= "https://github.com/josepps/site-de-cursos" 
             />
           </div>
-          
       </Section3>
       <Section4 id='section4'>
         <h2>Contatos</h2>
@@ -166,5 +173,4 @@ const [contador, setContador] = useState(0);
     </>
   )
 }
-
 export default App
