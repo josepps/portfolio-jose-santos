@@ -84,15 +84,13 @@ export const Section1 = styled.section`
                         width: 100vw; 
                         height: 100vh;
                         position: absolute;
-                        top: 0;
+                        top: -200vh;
                         left: 0;
                         background: #003249;
                         display: flex;
                         align-items: center;
                         justify-content: center;
-                        animation: aparecerNav 0.3s ease-in forwards;
-                        transform: translateX(100%);
-                        transition: transform 0.3s ease-in;
+                        transition: all 0.3s ease-in;
 
                         ul {
                         flex-direction: column;
@@ -184,7 +182,7 @@ export const Section1 = styled.section`
                 }
 
                 &.ativo nav {
-                    transform: translateX(0);
+                    top: 0;
 
                     ul li {
                             visibility: visible;
@@ -232,10 +230,10 @@ export const Section1 = styled.section`
                     width: 0;
                 }
                 45% {
-                    width: 50%;
+                    width: 432px;
                 }
                 55% {
-                    width: 50%;
+                    width: 432px;
                 }
                 90% {
                     width: 0;
@@ -308,8 +306,8 @@ export const Section1 = styled.section`
             position: relative;
 
             .container{
-                height: 60vh;
-                width: 30vw;
+                height: 60%;
+                width: 80%;
                 position: absolute;
                 top: 25vh;
                 right: 15vw;
@@ -387,16 +385,6 @@ export const Section1 = styled.section`
                 top: 125px;
                 transform: rotateX(-90deg);
             }
-            input {
-                height: 50px;
-                width: 100px;
-                background: pink;
-                font-size: 22px;
-                cursor: pointer;
-                position: absolute;
-                top: -170px;
-                left: 220px;
-            }
             .box:hover #front{
                 transform: translateZ(180px) rotateY(360deg);
             }
@@ -415,6 +403,91 @@ export const Section1 = styled.section`
             .box:hover #bottom{
                 top: 180px;
             }
+        }
+
+        @media screen and (max-width: 1150px) {
+            .containerMain:nth-child(1) {
+                width: 60%;
+            }
+
+            .containerMain:nth-child(2) {
+                width: 30%;
+
+                .container{
+                    width: 100%;
+                }
+            }
+        }
+        @media screen and (max-width: 1000px) {
+            flex-direction: column;
+
+            .containerMain:nth-child(1) {
+                height: 50vh;
+            }
+
+            .containerMain:nth-child(2) {
+                height: 20vh;
+                width: 60vw;
+                position: absolute;
+                bottom: 40%;
+                left: 60%;
+
+                .box {
+                    height: 100px;
+                    width: 100px;
+                }
+
+                .card {
+                    height: 100px;
+                    width: 100px;
+                    padding: 40px 0;
+                }
+
+                #front, #back, #bottom, #left, #right, #top {
+                    font-size: 1rem;
+                }
+
+                #front {
+                transform: translateZ(50px);
+                }
+                #back {
+                transform: translateZ(-50px);
+                }
+                #left {
+                    right: 50px;
+                    transform: rotateY(-90deg);
+                }
+                #right {
+                    left: 50px;
+                    transform: rotateY(90deg);
+                }
+                #top {
+                    bottom: 50px;
+                    transform: rotateX(90deg);
+                }
+                #bottom {
+                    top: 50px;
+                    transform: rotateX(-90deg);
+                }
+                .box:hover #front{
+                transform: translateZ(100px) rotateY(360deg);
+                }
+                .box:hover #back{
+                    transform: translateZ(-100px) rotateY(360deg);
+                }
+                .box:hover #left{
+                    right: 100px;
+                }
+                .box:hover #right{
+                    left: 100px;
+                }
+                .box:hover #top{
+                    bottom: 100px;
+                }
+                .box:hover #bottom{
+                    top: 100px;
+                }
+            } 
         }
     } 
 `;
