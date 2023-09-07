@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const ContainerProjetoStyle = styled.div`
-    width: 28%;
+    width: 400px;
     height: 250px;
     margin: 10px 15px 25px 15px;
     position: relative;

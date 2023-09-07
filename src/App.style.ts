@@ -537,7 +537,7 @@ export const Section3 = styled.section`
         align-items: center;
         justify-content: center;
         color: #007EA7;
-        font-size: 2rem;
+        font-size: 3rem;
     }
 
     #containerProjetos {
@@ -549,6 +549,9 @@ export const Section3 = styled.section`
         padding: 0 2%;
     }
 
+    @media screen and (max-width: 1200px) {
+        padding-bottom: 5%;
+    }
 `;
 
 export const Section4 = styled.section`
