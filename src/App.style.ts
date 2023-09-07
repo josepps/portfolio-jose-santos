@@ -556,7 +556,7 @@ export const Section3 = styled.section`
 
 export const Section4 = styled.section`
     width: 100vw;
-    height: 70vh;
+    height: auto;
     background: linear-gradient( #9AD1D4 50%, #CCDBDC );
     display: flex;
     flex-direction: column;
@@ -573,11 +573,11 @@ export const Section4 = styled.section`
     }
 
     .containerContatos{
-        width: 100%;
-        display: flex;
         height: 75%;
+        width: 95%;
         display: flex;
         align-items: center;
         justify-content: center;
+        flex-wrap: wrap;
     }
 `;

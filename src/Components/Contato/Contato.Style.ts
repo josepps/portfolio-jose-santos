@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const ContatoStyle = styled.a `
-    width: 20%;
+    width: 250px;
     margin: 5% 0;
     text-align: center;
     color: #007EA7;
