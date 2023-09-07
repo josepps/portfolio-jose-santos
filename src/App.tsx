@@ -42,6 +42,14 @@ const [estaAtivo, setEstaAtivo] = useState(false);
     setTimeout(contar, 1500);
   }, [contador]);
 
+  /////////////////////
+  const [scrollX, setScrollX] = useState(0);
+
+  const handleScroll = (event: React.UIEvent<HTMLDivElement>) => {
+    const { scrollLeft } = event.currentTarget;
+    setScrollX(scrollLeft);
+  };
+
   return (
     <>
       <Section1 id='section1'>
@@ -86,8 +94,8 @@ const [estaAtivo, setEstaAtivo] = useState(false);
       <Section2 id='section2'>
           <h2>Conhecimentos</h2>
 
-        <div className='containerTecnologias'>
-          <IconeTecnologia icone={<AiOutlineHtml5 />} descricao="HTML 5" />
+        <div className='containerTecnologias' onScroll={handleScroll}>
+          
           <IconeTecnologia icone={<DiCss3 />} descricao="CSS 3" />
           <IconeTecnologia icone={<SiJavascript />} descricao="JavaScript" />
           <IconeTecnologia icone={<SiTypescript />} descricao="TypeScript" />

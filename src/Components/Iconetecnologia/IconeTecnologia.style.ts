@@ -34,4 +34,13 @@ export const IconesTecnologias = styled.div`
                 display: block;
             }
         }
+
+        @media screen and (max-width: 850px) {
+            width: 200px;
+            height: 200px;
+
+            span {
+            font-size: 8rem;
+        }
+        }
 `;

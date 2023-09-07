@@ -120,7 +120,7 @@ export const Section1 = styled.section`
                     align-items: center;
                     justify-content: center;
                     width: 40px;
-                    height: 30%;
+                    height: 25px;
                     position: absolute;
                     top: 35px;
                     right: 10%;
@@ -166,7 +166,7 @@ export const Section1 = styled.section`
 
                         &.ativo {
                             span {
-                            left: 100px;
+                            left: 50vw;
                             }
                             
                             &::before {
@@ -516,6 +516,15 @@ export const Section2 = styled.section`
         justify-content: center;
         flex-wrap: wrap;
         width: 70%;
+    }
+
+    @media screen and (max-width: 850px) {
+        position: relative;
+        justify-content: flex-start;
+
+        .containerTecnologias {
+            width: 100%;
+        }
     }
 `;
 
