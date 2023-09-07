@@ -517,6 +517,13 @@ export const Section2 = styled.section`
         flex-wrap: wrap;
         width: 70%;
     }
+
+    @media screen and (max-width: 850px) {
+        .containerTecnologias {
+            width: 85%;
+        }
+    }
+
 `;
 
 export const Section3 = styled.section`
