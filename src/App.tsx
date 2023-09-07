@@ -92,13 +92,10 @@ const [estaAtivo, setEstaAtivo] = useState(false);
           <IconeTecnologia icone={<SiTypescript />} descricao="TypeScript" />
           <IconeTecnologia icone={<FaReact/>} descricao="React" />
           <IconeTecnologia icone={<FaVuejs />} descricao="VUE" />
-          <IconeTecnologia icone={<GrDocker />} descricao="Docker" />
-          <IconeTecnologia icone={<FaJava />} descricao="Java" />
-          <IconeTecnologia icone={<SiKotlin />} descricao="Kotlin" />
           <IconeTecnologia icone={<BsGit />} descricao="Git" />
           <IconeTecnologia icone={<SiMysql />} descricao="MySQL" />
+          <IconeTecnologia icone={<GrDocker />} descricao="Docker" />
           <IconeTecnologia icone={<FaNodeJs />} descricao="NodeJS" />
-          <IconeTecnologia icone={<SiSpring />} descricao="Spring" />
         </div>
       </Section2>
       <Section3 id='section3'>
