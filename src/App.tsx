@@ -87,7 +87,6 @@ const [estaAtivo, setEstaAtivo] = useState(false);
           <h2>Conhecimentos</h2>
 
         <div className='containerTecnologias'>
-          <IconeTecnologia icone={<AiOutlineHtml5 />} descricao="HTML 5" />
           <IconeTecnologia icone={<DiCss3 />} descricao="CSS 3" />
           <IconeTecnologia icone={<SiJavascript />} descricao="JavaScript" />
           <IconeTecnologia icone={<SiTypescript />} descricao="TypeScript" />
