@@ -419,7 +419,6 @@ export const Section1 = styled.section`
             }
         }
         @media screen and (max-width: 1000px) {
-            flex-direction: column;
 
             .containerMain:nth-child(1) {
                 height: 50vh;
@@ -427,7 +426,7 @@ export const Section1 = styled.section`
 
             .containerMain:nth-child(2) {
                 height: 20vh;
-                width: 60vw;
+                width: 40vw;
                 position: absolute;
                 bottom: 40%;
                 left: 60%;
@@ -488,6 +487,14 @@ export const Section1 = styled.section`
                     top: 100px;
                 }
             } 
+        }
+        @media screen and (max-width: 450px) {
+            .containerMain:nth-child(2) {
+                width: 20vw;
+                position: absolute;
+                bottom: 35%;
+                left: 30%;
+            }
         }
     } 
 `;
